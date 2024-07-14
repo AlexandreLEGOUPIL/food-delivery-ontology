@@ -1,0 +1,661 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org/"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2">
+        <rdfs:comment rdf:resource="http://schema.org/version/latest/schema.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#HasFoodType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#HasFoodType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#HasPriceRange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#HasPriceRange"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#deliveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#deliveredBy">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#deliveredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#deliveredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#hasLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#hasTimePreference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#hasTimePreference"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_preference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_preference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#loacatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#loacatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#loacatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#loacatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Location"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offeredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offeredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offeredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#worksWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#worksWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#worksWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#loacatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Adress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Adress"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#AdressLocalty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#AdressLocalty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Adress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#PostalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#PostalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Adress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Product -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#availableAtOrFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#availableAtOrFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoMidpoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoMidpoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoWithin"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoWithin"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoWithin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoWithin">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#availableAtOrFrom"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#itemOfferred -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#itemOfferred">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoMidpoint"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#geoMidpoint"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#maxPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#maxPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceCurrency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceSpecification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#priceSpecification">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seller -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seller">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#seeks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#BikeDelivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#BikeDelivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Burger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Burger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Cafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Cafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CarDelivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CarDelivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CasualDiningRestaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CasualDiningRestaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Combo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Combo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CourierService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#CourierService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_preference"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_preference"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#deliveredBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DiscountedOffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DiscountedOffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DroneDelivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DroneDelivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FastFoodRestaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FastFoodRestaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FineDiningRestaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FineDiningRestaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FrequentCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#FrequentCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#LimitedTimeOffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#LimitedTimeOffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#NewCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#NewCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#has_product"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Pizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Pizzeria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Pizzeria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#RegularCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#RegularCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#offers"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#ReturningCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#ReturningCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SeasonalOffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SeasonalOffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SelfDelivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SelfDelivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SingleItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#SingleItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Sushi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Sushi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Food_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#UserPreferences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#UserPreferences"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#VIPCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#VIPCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Napolitanian_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Napolitanian_Pizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Pizza"/>
+        <untitled-ontology-2:offeredBy rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Ristorante_Italiano"/>
+        <untitled-ontology-2:Product>A truely italian pizza</untitled-ontology-2:Product>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Ristorante_Italiano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Ristorante_Italiano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Restaurant"/>
+        <untitled-ontology-2:offers rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Napolitanian_Pizza"/>
+        <untitled-ontology-2:Product>A real Itlian restaurant hold by native italians</untitled-ontology-2:Product>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#VictorCharpenay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#VictorCharpenay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alexa/ontologies/2024/6/untitled-ontology-2#Customer"/>
+        <untitled-ontology-2:AdressLocalty>CorrençonEnVercors</untitled-ontology-2:AdressLocalty>
+        <untitled-ontology-2:Name>VictorCharpenay</untitled-ontology-2:Name>
+        <untitled-ontology-2:PostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38250</untitled-ontology-2:PostalCode>
+        <untitled-ontology-2:geoRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</untitled-ontology-2:geoRadius>
+        <untitled-ontology-2:itemOfferred>wd:Q177</untitled-ontology-2:itemOfferred>
+        <untitled-ontology-2:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.42788</untitled-ontology-2:latitude>
+        <untitled-ontology-2:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.40391</untitled-ontology-2:longitude>
+        <untitled-ontology-2:maxPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.5</untitled-ontology-2:maxPrice>
+        <untitled-ontology-2:priceCurrency>EUR</untitled-ontology-2:priceCurrency>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
